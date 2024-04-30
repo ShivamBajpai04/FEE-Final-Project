@@ -1,0 +1,13 @@
+
+import React from 'react';
+import { InfinitySpin } from 'react-loader-spinner';
+// import { Stack } from '@mui/material';
+
+const Loader = () => (
+  <div className="flex justify-center items-center w-full">
+    <InfinitySpin color="grey" />
+  </div>
+);
+
+
+export default Loader;
