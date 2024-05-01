@@ -37,37 +37,37 @@ const RightArrow = () => {
 };
 
 function HorizontalScrollbar({ data, bodyParts, setBodyPart, bodyPart }) {
-  const scrollToTop = () => {
+	const scrollToTop = () => {
 		window.scrollTo({
 			top: 0,
 			behavior: "smooth", // for smooth scroll
 		});
 	};
-	return (<div className="p-5">
-    
-      <ScrollMenu
-        LeftArrow={LeftArrow}
-        RightArrow={RightArrow}>
-        {data.map((item) => (
-          <div
-            onClick={scrollToTop}
-            key={item.id || item}
-            itemID={item.id || item}
-            title={item.id || item}
-            className="m-2">
-            {bodyParts ? (
-              <BodyPart
-                item={item}
-                setBodyPart={setBodyPart}
-                bodyPart={bodyPart}
-              />
-            ) : (
-              <ExerciseCard exercise={item} />
-            )}
-          </div>
-        ))}
-      </ScrollMenu>
-  </div>
+	return (
+		<div className="p-5">
+			<ScrollMenu
+				LeftArrow={LeftArrow}
+				RightArrow={RightArrow}>
+				{data.map((item) => (
+					<div
+						onClick={scrollToTop}
+						key={item.id || item}
+						itemID={item.id || item}
+						title={item.id || item}
+						className="m-2">
+						{bodyParts ? (
+							<BodyPart
+								item={item}
+								setBodyPart={setBodyPart}
+								bodyPart={bodyPart}
+							/>
+						) : (
+							<ExerciseCard exercise={item} />
+						)}
+					</div>
+				))}
+			</ScrollMenu>
+		</div>
 	);
 }
 
