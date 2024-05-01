@@ -1,9 +1,10 @@
 import React from "react";
+import Loader from "./Loader";
 // import { randomUUID } from "crypto";
 // import { Typography, Box, Stack } from "@mui/material";
 
 function ExerciseVideos({ exerciseVideos, name }) {
-	if (!exerciseVideos.length) return "loading...";
+	if (!exerciseVideos.length) return <Loader />;
 
 	return (
 		<div className="mt-5 p-20">
