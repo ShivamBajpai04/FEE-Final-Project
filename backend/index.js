@@ -16,12 +16,12 @@ await mongoose
 	})
 	.catch((err) => console.log(err));
 
-  
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: "https://fee-final-project.vercel.app/",
+		origin: "https://fee-final-project.vercel.app",
 		credentials: true,
 	})
 );
