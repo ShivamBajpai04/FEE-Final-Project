@@ -32,5 +32,5 @@ app.listen(PORT, () => {
 
 
 app.get('/', (req, res) => {
-  console.log('server started ^_~');
+  res.send('server started ^_~');
 })
