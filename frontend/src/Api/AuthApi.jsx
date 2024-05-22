@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "fee-final-project-89nf.vercel.app/auth"; // Replace with your actual backend API URL
+const API_BASE_URL = "https://fee-final-project-89nf.vercel.app/auth"; // Replace with your actual backend API URL
 
 const axiosConfig = {
 	withCredentials: true,
