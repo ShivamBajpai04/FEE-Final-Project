@@ -45,26 +45,7 @@ function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
 				Best Pump Workout <br />
 				Feel The Pump
 			</h1>
-			<div className="flex gap-5 items-center relative mb-20">
-				<input
-					className="h-16 px-6 font-bold rounded-full w-96 xs:w-72 bg-white"
-					value={search}
-					onChange={(e) => setSearch(e.target.value.toLowerCase())}
-					placeholder="Search Gains"
-					type="text"
-					onKeyDown={(e) => {
-						if (e.key === "Enter") {
-							handleSearch();
-							e.preventDefault(); // To prevent form submission
-						}
-					}}
-				/>
-				<button
-					className="search-btn rounded-full bg-red-600 text-white text-lg w-32 h-14"
-					onClick={handleSearch}>
-					Search
-				</button>
-			</div>
+			
 			<div className="relative w-full p-4">
 				<HorizontalScrollbar
 					data={bodyParts}
